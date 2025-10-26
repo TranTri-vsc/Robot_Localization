@@ -61,7 +61,7 @@ project4/
    The node waits for `/world_map` and the first `/compass` reading before initializing 1,500 particles uniformly over valid tiles; orientation is seeded from the compass.
 
 4. **Provide sensor & motion topics**
-   - `/compass` (`Float32`, radians), `/cmd_vel` (`Twist`), `/floor_sensor` (`UInt8`). See subscribers in the code. fileciteturn0file3L26-L41
+   - `/compass` (`Float32`, radians), `/cmd_vel` (`Twist`), `/floor_sensor` (`UInt8`). See subscribers in the code.
 
 5. **Visualize**
    - Subscribe in RViz to `/particles` (MarkerArray), `/robot_pose` (PoseStamped), `/pose_path` (Marker line strip), and `/estimated_pose` (Pose2D at 0.5 Hz).
@@ -125,7 +125,7 @@ These parameters are hard-coded in the sensor update step (light: μ=116.5, σ=9
 ## Configuration knobs & design choices
 
 - `num_particles = 1500` – Balanced for accuracy vs. runtime. 
-- **Resampling cadence:** every 5 `/floor_sensor` messages; helps avoid particle impoverishment while limiting compute. fileciteturn0file3L197-L203  
+- **Resampling cadence:** every 5 `/floor_sensor` messages; helps avoid particle impoverishment while limiting compute.
 - **Boundary enforcement:** weights are multiplied by **0.001** if a particle drifts near bounds or onto unknown tiles (strong prior on feasibility).
 - **Compass variance:** ~0.015 rad² per particle when fusing compass; re-uniform weights after compass realign to avoid bias from stale weights.
 - **Pose publishing rates:** visuals at 10 Hz, Pose2D at 0.5 Hz.
