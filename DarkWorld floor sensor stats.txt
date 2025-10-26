@@ -1,0 +1,5 @@
+Mean: 116.49532710280374
+Variance: 82.97895012664861
+Standard Deviation: 9.109278244002025
+Min Value: 102.0
+Max Value: 132.0

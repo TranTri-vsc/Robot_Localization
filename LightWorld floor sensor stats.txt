@@ -1,0 +1,6 @@
+Statistical Details for floor_sensor_data.txt:
+Mean: 136.1437125748503
+Variance: 77.84761016888378
+Standard Deviation: 8.823129273046144
+Min Value: 122.0
+Max Value: 152.0
