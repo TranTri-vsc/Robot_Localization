@@ -171,17 +171,9 @@ Once built, you can launch the nodes by name (defined in `setup.py`):
 
 ---
 
-## Data & figures (optional)
-
-If you plan to include figures, you can add:
-- Time-series and histogram plots from `floor_sensor_graph.py` / `analyze_floor_sense_data.py`. 
-- Any saved PNGs of particle clouds or paths from RViz.
-
----
-
 ## License
 
-Update `setup.py` with your license choice. (Currently a TODO.)
+(Currently a TODO.)
 
 ---
 
